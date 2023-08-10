@@ -1,0 +1,170 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+
+}
+.folderPicker{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: "#1c184e";
+}
+h3{
+    color: white;
+    display: inline-block;
+    font-size: 36px;
+}
+h1.header{
+    margin-top: -5px;
+    font-size: 60px;
+    text-align: center;
+    color: #2e2880;
+}
+.sl{
+    
+    color:#4c43cd
+}
+span.title{
+    margin-right: 34px;
+    text-align: right;
+    font-size: 36px;
+    color:white;
+}
+.inputBox{
+    text-align: right;
+    position: relative;
+    width: 500px;
+}
+.inputBox input
+{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255,0.25);
+    background: #1c184e;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 34px;
+}
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 15px;
+    pointer-events: none;
+    color: rgba(255, 255, 255,0.25);
+    text-transform: uppercase;
+    transition: 0.25s;
+    font-size: 36px;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #00dfc4;
+    transform: translateX(10px)translateY(-7px);
+    padding: 0 10px;
+    background:  #1c184e;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    font-size: 24px;
+}
+
+.inputBox input:read-only ~ span{
+    color: #00dfc4;
+    transform: translateX(10px)translateY(-7px);
+    padding: 0 10px;
+    background:  #1c184e;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    font-size: 24px;
+}
+
+  
+.heart {
+  animation: pulse 2s linear infinite; 
+    fill: red; 
+     position: relative;
+     top: 10px;
+    width: 30px;
+    animation: pulse 2s linear infinite,  
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+
+.loader {
+    display: inline-block;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.btn_control{
+    color: white;
+}
+
+.btn_control:hover{
+    color: #00dfc4;
+}
+
+
+  /* CSS */
+  .button-89 {
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #449f28;
+    
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 32px;
+  
+    border: 0;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-89:hover,
+  .button-89:focus-visible{
+    background:      conic-gradient(from 90deg at var(--b) var(--b),#9ded85 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+  }
+  
+  .button-89:active {
+    background: var(--color);
+    color: #fff;
+  }
+
+
+
+
+

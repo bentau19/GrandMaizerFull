@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GrandMaizer</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- takes care of the functionality of the buttons -->
+<script src="index.js"></script>
+
+<body>
+    <h1 style="margin-top: 10px;" class="header"><span class="sl">G</span>rand<span class="sl">M</span>aizer</h1>
+    <div class="inputBox">
+        <input type="text"  id="name" required="required" onchange="search()">
+        <span >song name</span>
+    </div>
+    <div class="inputBox">
+        <input type="text" id="performer" required="required" onchange="search()">
+        <span>performer</span>
+    </div>
+    <iframe id="link" width="450" height="150" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        src="https://www.youtube.com/embed/q1vTO4pfhGM">
+    </iframe>
+
+    <div>
+        <iconify-icon class="btn_control" id="btn_left" onclick="backward()" icon="typcn:arrow-up-outline" style="visibility: hidden;float: left; padding-right:5px; padding-top: 5px;" width="30" height="30" rotate="-90deg"></iconify-icon>
+        <h3><span id="current">1</span>/<span id="total">1</span></h3>
+        <iconify-icon class="btn_control" onclick="forward()" id="btn_right" icon="typcn:arrow-up-outline" style="visibility: hidden;float: right; padding-left:5px; padding-top: 5px;" width="30" height="30" rotate="90deg"></iconify-icon>
+    </div>
+    <div style="display: flex; flex-direction: row;">
+    <iconify-icon icon="fontisto:folder" style=" margin-top: 15px;" class="btn_control" width="80" height="30" flip="horizontal"onclick="saveFile()"></iconify-icon>
+    <div class="inputBox" >
+        <input  type="text" id="dir" required="required" readonly >
+        <span>directory</span>
+    </div>
+</div>
+    <div >
+    <div style=" float: left; padding-right:10px; padding-top: 10px;">  <div class="loader" style="visibility: hidden;"></div></div>
+  <button onclick="download()" id="ButtonDiv" class="button-89" role="button">DOWNLOAD</button>
+  <div style=" float: right; padding-left:10px; padding-top: 10px;">  <div id="dIndicator"class="loader" style="visibility: hidden;"></div></div>
+    </div>
+    <div>
+    <h2 style="float: left; color:white; padding-right: 10px; padding-top: 10px;">FOR GRADMA WITH </h2>
+    <svg class="heart" viewBox="0 0 32 29.6">
+      <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+      c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+    </svg> 
+</div>
+<script>test();</script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+</html>
